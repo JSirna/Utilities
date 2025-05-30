@@ -14,10 +14,6 @@ def convert_to_json(filepath):
     try:
         with open(filepath, 'r') as csv_file:
             csv_reader = csv.DictReader(csv_file)
-            # Count rows for progress tracking
-            for row in csv_reader:
-                count += 1
-            print(count)
             for row in csv_reader:
                 json_data.append(row)
     except Exception as e:
